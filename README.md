@@ -1,18 +1,19 @@
 # RESTful Routing
 
-
+A standard for client-server architectures.
+https://en.wikipedia.org/wiki/Representational_state_transfer
 
 ## HTTP Methods
 
-aka _verbs_.
+aka _verbs_. They specify what effect a request is intended to have and how the server should process it. It is up to the server to do so correctly.
 
-[Wikipedia's documentation on the verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+[Wikipedia's documentation on the methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 
 ### Idempotence
 
 Roughly speaking, something is _idempotent_ if doing it repeatedly gives the same effect as doing it the first time. The HTTP methods can be classified by whether or not they are idempotent.
 
-### Important Verbs
+### Important Methods
 
 #### GET
 
@@ -26,7 +27,7 @@ In practice, POST is also frequently used to perform operations not covered by G
 
 > given most web browsers' natural limitation to use only GET or POST, designers felt the need to re-purpose POST to do many other data submission and data management tasks, including the alteration of existing records and their deletion.
 
-The AJAX techniques we'll be using have ways of enabling verbs beyond `GET` and `POST`, so this limitation isn't onerous for us and we can easily implement correct RESTful routes.
+The AJAX techniques we'll be using have ways of enabling methods beyond `GET` and `POST`, so this limitation isn't onerous for us and we can easily implement correct RESTful routes.
 
 #### PUT
 
@@ -72,4 +73,4 @@ Here transcribed:
 | URL | GET | PUT | PATCH | POST | DELETE
 |--|--|--|--|--|--|
 |Collection, such as `https://api.example.com/resources/`| List the URIs and perhaps other details of the collection's members. | Replace the entire collection with another collection. | Not generally used | Create a new entry in the collection. The new entry's URI is assigned automatically and is usually returned by the operation | Delete the entire collection. |
-| Element, such as `https://api.example.com/resources/item17` | Retrieve a representation of the addressed member of the collection, expressed in an appropriate Internet media type. | Replace the addressed member of the collection, or if it does not exist, create it. | Update the addressed member of the collection. | Not generally used. Treat the addressed member as a collection in its own right and create a new entry within it | Delete the addressed member of the collection. | 
+| Element, such as `https://api.example.com/resources/item17` | Retrieve a representation of the addressed member of the collection, expressed in an appropriate Internet media type. | Replace the addressed member of the collection, or if it does not exist, create it. | Update the addressed member of the collection. | Not generally used. Treat the addressed member as a collection in its own right and create a new entry within it | Delete the addressed member of the collection. |
