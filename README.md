@@ -45,7 +45,7 @@ Idempotent?
 
 Supplies partial information to a URI; the resource at that URI is then updated to reflect it. If the URI does not currently point to a specific resource, "the server MAY create a new resource," according to some [official-looking docs](https://tools.ietf.org/html/rfc5789).
 
-In my ridiculous opinion this _should_ be idempotent, to support idempotent merges, the food of the gods. It is not required by the spec, however, for reasons that elude me. If you want to support PATCH (generally not required for what we're doing), you can write your server to support it (from the same docs: "A PATCH request can be issued in such a way as to be idempotent"). For bickering about whether PATCH should or should not be idempotent, see [this Hacker News thread](https://news.ycombinator.com/item?id=4198854).
+In my opinion this _should_ be idempotent, to support idempotent merges. It is not required by the spec, however, for reasons that elude me. If you want to support PATCH (generally not required for what we're doing), you can write your server to support it (from the same docs: "A PATCH request can be issued in such a way as to be idempotent"). For bickering about whether PATCH should or should not be idempotent, see [this Hacker News thread](https://news.ycombinator.com/item?id=4198854).
 
 ## Semantic URLs
 
