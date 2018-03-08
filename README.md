@@ -74,3 +74,21 @@ Here transcribed:
 |--|--|--|--|--|--|
 |Collection, such as `https://api.example.com/resources/`| List the URIs and perhaps other details of the collection's members. | Replace the entire collection with another collection. | Not generally used | Create a new entry in the collection. The new entry's URI is assigned automatically and is usually returned by the operation | Delete the entire collection. |
 | Element, such as `https://api.example.com/resources/item17` | Retrieve a representation of the addressed member of the collection, expressed in an appropriate Internet media type. | Replace the addressed member of the collection, or if it does not exist, create it. | Update the addressed member of the collection. | Not generally used. Treat the addressed member as a collection in its own right and create a new entry within it | Delete the addressed member of the collection. |
+
+## Codealong Lab
+
+Install [Postman](https://www.getpostman.com/), a GUI HTTP client.
+
+Install JavaScript dependencies for running a server locally.
+
+```
+npm install
+```
+
+Run the server
+
+```
+node index.js
+```
+
+Visit the website [`http://localhost:5678/`](http://localhost:5678/)
