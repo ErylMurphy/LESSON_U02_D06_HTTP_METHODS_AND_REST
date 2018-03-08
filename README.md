@@ -92,3 +92,17 @@ node index.js
 ```
 
 Visit the website [`http://localhost:5678/`](http://localhost:5678/)
+
+Dinoland is empty. 
+
+You can see that there are no dinosaurs by visiting the `http://localhost:5678/dinosaurs` `GET` endpoint in Postman.
+
+Create a dinosaur at the `http://localhost:5678/dinosaurs` `POST` endpoint. You may need to provide some data.
+
+Create a few dinosaurs. Visit the homepage again [`http://localhost:5678/`](http://localhost:5678/) to see the web app update after adding a few, and the `http://localhost:5678/dinosaurs` `GET` endpoint to see what kind of data it offers us.
+
+See data about a specific dinosaur at the `http://localhost:5678/dinosaurs/:id` `GET` endpoint.
+
+Delete a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
+
+Update information about a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
