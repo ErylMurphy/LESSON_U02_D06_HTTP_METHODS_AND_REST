@@ -116,10 +116,10 @@ node index.js
 
 3. Create a dinosaur by sending a reques to the `http://localhost:5678/dinosaurs` `POST` endpoint. You may need to provide some data, look at the response body for helpful information.
 
-4. Create a few dinosaurs. Visit the homepage again [`http://localhost:5678/`](http://localhost:5678/) to see the web app update after adding a few, and the `http://localhost:5678/dinosaurs` `GET` endpoint to see what kind of data it offers us.
+4. Create a few more dinosaurs! Visit the homepage again [`http://localhost:5678/`](http://localhost:5678/) to see the web app update after adding a few, and the `GET http://localhost:5678/dinosaurs` endpoint to see what kind of data it offers us.
 
-5. See data about a specific dinosaur at the `http://localhost:5678/dinosaurs/:id` `GET` endpoint.
+5. See data about a specific dinosaur at the `GET http://localhost:5678/dinosaurs/:id` endpoint.
 
 6. Delete a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
 
-7. Update information about a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
+7. Update information about a dinosaur at the `PATCH http://localhost:5678/dinosaurs/:id` endpoint.
