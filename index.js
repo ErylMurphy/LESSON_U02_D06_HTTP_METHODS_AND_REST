@@ -9,7 +9,7 @@ const dinosaurs = {};
 
 const buildHTML = () => {
   return (
-    "<html><head><style>img { max-width: 150px;}</style></head><body>" +
+    "<html><head><style>img { max-width: 150px;}</style></head><body><h1>Dinoland</h1>" +
     Object.keys(dinosaurs).map(
       dinoIndex =>
         "<div><h2> ID " +
@@ -24,7 +24,11 @@ const buildHTML = () => {
   );
 };
 
-app.get("/", (req, res) => res.send(buildHTML()));
+app.get("/", (req, res) => {
+  console.log(buildHTML());
+  res.send(buildHTML());
+  console.log("wat");
+});
 
 app.get("/dinosaurs", (req, res) => {
   res.json(dinosaurs);
