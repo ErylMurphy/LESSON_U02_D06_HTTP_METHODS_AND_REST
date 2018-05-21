@@ -9,7 +9,7 @@ _After this lesson, students will be able to:_
 
 An HTTP request can include a lot of information, but the most important bits are:
 
-*   The URL, for example `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+*   The URL, for example `https://restaurant-reviews.com/maysville`
 *   The HTTP method, for example `GET` or `POST`
 
 The method, like `GET`, describes what effect a request is intended to have, and how the server should process it.
@@ -20,7 +20,7 @@ Read more in [the HTTP Verbs section of this article](https://code.tutsplus.com/
 
 A `GET` request retrieves data at the provided URL. This is the most common HTTP method, as it's the default when we enter a URL into our browser.
 
-For example, making the request `GET https://www.nytimes.com` returns the HTML content for The New York Times homepage.
+For example, making the request `GET https://restaurant-reviews.com/restaurants/353` returns the HTML content for Maysville restaurant.
 
 `GET` requests are **idempotent**. We can make the same request again and again and get the same result.
 
@@ -30,7 +30,7 @@ For example, making the request `GET https://www.nytimes.com` returns the HTML c
 
 A `POST` request creates a new item on the server.
 
-A request like `POST https://www.yelp.com/little-beet-restaurant/review` could make a new review for Little Beet Restaurant when we click the "Write a Review" button on the webpage.
+A request like `POST https://restaurant-reviews.com/reviews` could make a new review when we click the "Submit review" button on the webpage.
 
 `POST` requests are often accompanied by data passed along in the HTTP request body. e.g. when we write a review for Little Beet, we would include our username (`eric`), our review (`The shrimp salad is so delightful`), and a star rating (`4` out of 5).
 
@@ -50,7 +50,7 @@ The AJAX techniques we'll be using have ways of enabling methods beyond `GET` an
 
 The `DELETE` method removes the resource at the URL.
 
-For example, `DELETE https://www.yelp.com/little-beet-restaurant/review/353` will delete the review with the ID of `353`.
+For example, `DELETE https://restaurant-reviews.com/restaurants/353` will delete the review with the ID of `353`.
 
 `DELETE` requests are **not** idempotent. When we make one of these requests, the state of the server changes. Making the request again would probably result in an error since the item was already deleted.
 
@@ -60,7 +60,7 @@ The `DELETE` method is similar to the `DELETE FROM` statement.
 
 The `PUT` method updates an item at the specified resouce.
 
-A request like `PUT https://www.yelp.com/little-beet-restaurant` could update the information for Little Beet Restaurant after the owner edits the restaurant's hours.
+A request like `PUT https://restaurant-reviews.com/restaurants/353` could update the information for Little Beet Restaurant after the owner edits the restaurant's hours.
 
 Like `POST` requests, `PUT` requests come with data in the HTTP request body to specify the fields and new values to update. For example `Hours: M-F 10a-10p, closed on Saturday and Sunday`.
 
