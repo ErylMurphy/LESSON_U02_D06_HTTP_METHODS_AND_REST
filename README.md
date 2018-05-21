@@ -2,8 +2,8 @@
 
 _After this lesson, students will be able to:_
 
-* Match the HTTP methods GET, POST, PATCH and DELETE to the database actions INSERT INTO, SELECT, UPDATE and DELETE
-* Describe the behavior associated with the HTTP methods GET, POST, PATCH and DELETE at different RESTful endpoints
+* Match the HTTP methods GET, POST, PUT and DELETE to the database actions INSERT INTO, SELECT, UPDATE and DELETE
+* Describe the behavior associated with the HTTP methods GET, POST, PUT and DELETE at different RESTful endpoints
 
 ## HTTP Methods
 
@@ -56,13 +56,13 @@ For example, `DELETE https://www.yelp.com/little-beet-restaurant/review/353` wil
 
 The `DELETE` method is similar to the `DELETE FROM` statement.
 
-### `PATCH`
+### `PUT`
 
-The `PATCH` method updates an item at the specified resouce.
+The `PUT` method updates an item at the specified resouce.
 
-A request like `PATCH https://www.yelp.com/little-beet-restaurant` could update the information for Little Beet Restaurant after the owner edits the restaurant's hours.
+A request like `PUT https://www.yelp.com/little-beet-restaurant` could update the information for Little Beet Restaurant after the owner edits the restaurant's hours.
 
-Like `POST` requests, `PATCH` requests come with data in the HTTP request body to specify the fields and new values to update. For example `Hours: M-F 10a-10p, closed on Saturday and Sunday`.
+Like `POST` requests, `PUT` requests come with data in the HTTP request body to specify the fields and new values to update. For example `Hours: M-F 10a-10p, closed on Saturday and Sunday`.
 
 ## Methods and URLs
 
@@ -72,7 +72,7 @@ https://en.wikipedia.org/wiki/Representational_state_transfer#Relationship_betwe
 
 Here transcribed:
 
-| URL                                                         | GET                                                                                                                   | PUT                                                                                 | PATCH                                          | POST                                                                                                                         | DELETE                                         |
+| URL                                                         | GET                                                                                                                   | PUT                                                                                 | PUT                                          | POST                                                                                                                         | DELETE                                         |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Collection, such as `https://api.example.com/resources/`    | List the URIs and perhaps other details of the collection's members.                                                  | Replace the entire collection with another collection.                              | Not generally used                             | Create a new entry in the collection. The new entry's URI is assigned automatically and is usually returned by the operation | Delete the entire collection.                  |
 | Element, such as `https://api.example.com/resources/item17` | Retrieve a representation of the addressed member of the collection, expressed in an appropriate Internet media type. | Replace the addressed member of the collection, or if it does not exist, create it. | Update the addressed member of the collection. | Not generally used. Treat the addressed member as a collection in its own right and create a new entry within it             | Delete the addressed member of the collection. |
@@ -122,4 +122,4 @@ node index.js
 
 6. Delete a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
 
-7. Update information about a dinosaur at the `PATCH http://localhost:5678/dinosaurs/:id` endpoint.
+7. Update information about a dinosaur at the `PUT http://localhost:5678/dinosaurs/:id` endpoint.
