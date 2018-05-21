@@ -23,13 +23,11 @@ const buildHTML = () => {
   );
 };
 
-app.get("/", (req, res) => {
-  console.log(buildHTML());
+app.get("/dinosaurs", (req, res) => {
   res.send(buildHTML());
-  console.log("wat");
 });
 
-app.get("/dinosaurs", (req, res) => {
+app.get("/dinosaurs.json", (req, res) => {
   res.json(dinosaurs);
 });
 
@@ -60,7 +58,7 @@ app.post("/dinosaurs", (req, res) => {
   res.status(201).send(index.toString());
 });
 
-app.get("/dinosaurs/:id", (req, res) => {
+app.get("/dinosaurs/:id.json", (req, res) => {
   const id = Number(req.params.id);
 
   if (!id in dinosaurs) {
@@ -71,7 +69,7 @@ app.get("/dinosaurs/:id", (req, res) => {
   res.json(dinosaurs[id]);
 });
 
-app.patch("/dinosaurs/:id", (req, res) => {
+app.put("/dinosaurs/:id", (req, res) => {
   const id = Number(req.params.id);
 
   if (!id in dinosaurs) {
