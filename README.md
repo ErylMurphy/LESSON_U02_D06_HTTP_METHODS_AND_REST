@@ -2,15 +2,15 @@
 
 _After this lesson, students will be able to:_
 
-* Match the HTTP methods GET, POST, PATCH and DELETE to the database actions INSERT INTO, SELECT, UPDATE and DELETE
-* Describe the behavior associated with the HTTP methods GET, POST, PATCH and DELETE at different RESTful endpoints
+*   Match the HTTP methods GET, POST, PATCH and DELETE to the database actions INSERT INTO, SELECT, UPDATE and DELETE
+*   Describe the behavior associated with the HTTP methods GET, POST, PATCH and DELETE at different RESTful endpoints
 
 ## HTTP Methods
 
 An HTTP request can include a lot of information, but the most important bits are:
 
-* The URL, for example `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-* The HTTP method, for example `GET` or `POST`
+*   The URL, for example `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+*   The HTTP method, for example `GET` or `POST`
 
 The method, like `GET`, describes what effect a request is intended to have, and how the server should process it.
 
@@ -85,12 +85,12 @@ Semantic URLs are a way of structuring the URLs (or "routes") accepted by our se
 
 In many ways this is more art than science, but there are some principles to follow.
 
-* Levels of resources are separated by slashes `/`
-* In a parent-child relationship, the parent comes before the child: `parent/child`
-* The collection-element relationship is a parent-child relationship
-* Collections of resources are pluralized
-* Individual elements within a collection may be represented by unique ids
-* In most cases collections can be represented by a more descriptive name
+*   Levels of resources are separated by slashes `/`
+*   In a parent-child relationship, the parent comes before the child: `parent/child`
+*   The collection-element relationship is a parent-child relationship
+*   Collections of resources are pluralized
+*   Individual elements within a collection may be represented by unique ids
+*   In most cases collections can be represented by a more descriptive name
 
 Some hand-wavy examples of semantic URLs can be found on the [relevant Wikipedia article](https://en.wikipedia.org/wiki/Semantic_URL#Structure).
 
@@ -110,16 +110,16 @@ Run the server
 node index.js
 ```
 
-1. Visit the website [`http://localhost:5678/`](http://localhost:5678/)
+1.  Visit the website [`http://localhost:5678/dinosaurs`](http://localhost:5678/dinosaurs)
 
-2. Notice that Dinoland is empty to begin with!
+2.  Notice that Dinoland is empty to begin with!
 
-3. Create a dinosaur by sending a reques to the `http://localhost:5678/dinosaurs` `POST` endpoint. You may need to provide some data, look at the response body for helpful information.
+3.  Create a dinosaur by sending a reques to the `http://localhost:5678/dinosaurs` `POST` endpoint. You may need to provide some data, look at the response body for helpful information.
 
-4. Create a few more dinosaurs! Visit the homepage again [`http://localhost:5678/`](http://localhost:5678/) to see the web app update after adding a few, and the `GET http://localhost:5678/dinosaurs` endpoint to see what kind of data it offers us.
+4.  Create a few more dinosaurs! Visit the homepage again [`http://localhost:5678/dinosaurs`](http://localhost:5678/dinosaurs) to see the web app update after adding a few, and the `GET http://localhost:5678/dinosaurs.json` endpoint to see what kind of data it offers us.
 
-5. See data about a specific dinosaur at the `GET http://localhost:5678/dinosaurs/:id` endpoint.
+5.  See data about a specific dinosaur at the `GET http://localhost:5678/dinosaurs/:id.json` endpoint.
 
-6. Delete a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
+6.  Delete a dinosaur at the `http://localhost:5678/dinosaurs/:id` `DELETE` endpoint.
 
-7. Update information about a dinosaur at the `PATCH http://localhost:5678/dinosaurs/:id` endpoint.
+7.  Update information about a dinosaur at the `PATCH http://localhost:5678/dinosaurs/:id` endpoint.
